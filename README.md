@@ -1,14 +1,14 @@
-# Webapp Template
+# An insanely lightweight webapp template
 
-Template designed to quickly build full stack apps without worrying about server development or docker. 
+This template is meant to be super lightweight, therefore, you will be missing a couple features like Docker or server deployment. This is mostly for prototyping. If you are looking for a template with more features check out: 
 
-You can integrate Firebase super easily here or utilize one of the webapp templates by Jayden Pyles or Michael Gathara instead. 
+- [jayples/webapp-template](https://github.com/jaypyles/webapp-template)
+- [michaelgathara/webapp-template](https://github.com/michaelgathara/webapp-template)
+
 
 Utilizes Github Actions and Ansible to build Docker images to quickly deploy onto an AWS EC2 Debian instance.
 
 ## Technologies
-
-- Containerization: Docker/Docker Compose - please see [jayplyes/webapp-template](https://github.com/jayples/webapp-template) or [michaelgathara/webapp-template](https://github.com/michaelgathara/webapp-template)
 
 - Frontend: React/Next.js
 
@@ -19,21 +19,21 @@ Utilizes Github Actions and Ansible to build Docker images to quickly deploy ont
 ## Deployment
 
 ### Local Deployment/Development
+- Create environment: `python3 -m venv venv`
+- Activate environment: `source venv/bin/activate`
 
 Uses `make` to quickly dispatch launch commands.
 
-- `deps`: rebuilds the frontend to deploy statically using the api
+- `deps`: installs needed deps
 
-- `frontend`: starts the frontend
+- `frontend`: starts the frontend (run in one terminal)
 
-- `backend`: starts the backend
+- `backend`: starts the backend (run in another terminal)
 
-- `build`: builds the npm assets using `npm build`
+- `audit`: npm audits
 
-Ex: `make deps build up-dev`
+- `audit-fix`: npm audit fix
 
-### Server Deployment
+- `build`: builds the npm assets using `npm build`1
 
-You typically would want to use something like
-- [jayples/webapp-template](https://github.com/jayples/webapp-template)
-- [michaelgathara/webapp-template](https://github.com/michaelgathara/webapp-template)
+Ex: `make deps`

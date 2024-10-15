@@ -15,14 +15,18 @@ help:
 deps:
 	pip install -r requirements.txt
 	npm install
-	npm run build
+
+audit:
+	npm audit
+
+audit-fix:
+	npm audit fix
 
 frontend:
-	npm run start
+	npm run dev
 
 backend:
-	cd api
-	python3 app.py 
+	python -m uvicorn api.backend.app:app --reload --host 0.0.0.0 --port 8000 
 
 build:
-	npm build
+	npm run build
