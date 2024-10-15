@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = [
     {name = "Jayden Pyles", email = "jpylesbuisness@gmail.com"},
+    {name = "Michael Gathara", email = "michael@michaelgathara.com"},
 ]
 dependencies = [
     "uvicorn>=0.29.0",

@@ -17,5 +17,12 @@ deps:
 	npm install
 	npm run build
 
+frontend:
+	npm run start
+
+backend:
+	cd api
+	python3 app.py 
+
 build:
 	npm build

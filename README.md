@@ -1,6 +1,8 @@
 # Webapp Template
 
-Template designed to quickly build full stack apps.
+Template designed to quickly build full stack apps without worrying about server development or docker. 
+
+You can integrate Firebase super easily here or utilize one of the webapp templates by Jayden Pyles or Michael Gathara instead. 
 
 Utilizes Github Actions and Ansible to build Docker images to quickly deploy onto an AWS EC2 Debian instance.
 
@@ -16,27 +18,22 @@ Utilizes Github Actions and Ansible to build Docker images to quickly deploy ont
 
 ## Deployment
 
-### Local Deployment
+### Local Deployment/Development
 
-Uses `make` to quickly dispatch `docker-compose` commands.
+Uses `make` to quickly dispatch launch commands.
 
 - `deps`: rebuilds the frontend to deploy statically using the api
 
-- `build`: builds the container using `docker-compose build `
+- `frontend`: starts the frontend
 
-- `up-prd`: ups the container using `docker-compose -f docker-compose.yml up`
+- `backend`: starts the backend
 
-- `up-dev`: ups the container using `docker-compose -f docker-compose.yml -f docker-compose.dev.yml up`
-  which will deploy with local volumes.
+- `build`: builds the npm assets using `npm build`
 
 Ex: `make deps build up-dev`
 
 ### Server Deployment
 
-Easy deployment using `make setup deploy` after completing the required config files.
-
-- `setup`: Install dependencies and clone repo onto server
-
-- `deploy`: Deploy on server
-
-To use a SSL certificate, uncomment the volumes under the `traefik` service. Add your own certificates for use in Traefik.
+You typically would want to use something like
+- [jayples/webapp-template](https://github.com/jayples/webapp-template)
+- [michaelgathara/webapp-template](https://github.com/michaelgathara/webapp-template)
