@@ -5,9 +5,6 @@ This template is meant to be super lightweight, therefore, you will be missing a
 - [jayples/webapp-template](https://github.com/jaypyles/webapp-template)
 - [michaelgathara/webapp-template](https://github.com/michaelgathara/webapp-template)
 
-
-Utilizes Github Actions and Ansible to build Docker images to quickly deploy onto an AWS EC2 Debian instance.
-
 ## Technologies
 
 - Frontend: React/Next.js
